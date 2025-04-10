@@ -1,0 +1,8 @@
+include::onecx-test-2-attributes.adoc[opts=optional]
+
+== onecx-test-2
+
+include::docs.adoc[opts=optional]
+
+
+include::onecx-test-2-docs.adoc[opts=optional]

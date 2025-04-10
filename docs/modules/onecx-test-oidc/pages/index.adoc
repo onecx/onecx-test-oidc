@@ -1,0 +1,8 @@
+include::onecx-test-oidc-attributes.adoc[opts=optional]
+
+== onecx-test-oidc
+
+include::docs.adoc[opts=optional]
+
+
+include::onecx-test-oidc-docs.adoc[opts=optional]
