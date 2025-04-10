@@ -11,8 +11,8 @@ import io.quarkus.test.common.http.TestHTTPEndpoint;
 import io.quarkus.test.junit.QuarkusTest;
 
 @QuarkusTest
-@TestHTTPEndpoint(TestImplRestController.class)
-public class TestImplRestControllerTest extends AbstractTest {
+@TestHTTPEndpoint(BackendRestController.class)
+public class BackendRestControllerTest {
 
     @Test
     void testEndpointSecurity() {

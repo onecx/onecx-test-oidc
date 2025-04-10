@@ -11,13 +11,13 @@ import org.jose4j.jwt.JwtClaims;
 import org.jose4j.jwx.JsonWebStructure;
 import org.tkit.quarkus.log.cdi.LogService;
 
-import gen.org.tkit.onecx.test.oidc.rs.internal.TestImplApiService;
+import gen.org.tkit.onecx.test.oidc.rs.internal.BackendApiService;
 import gen.org.tkit.onecx.test.oidc.rs.internal.model.TokenDTO;
 
 @ApplicationScoped
 @Transactional(value = Transactional.TxType.NOT_SUPPORTED)
 @LogService
-public class TestImplRestController implements TestImplApiService {
+public class BackendRestController implements BackendApiService {
 
     @Inject
     JsonWebToken jwt;

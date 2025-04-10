@@ -44,13 +44,16 @@ Default values
 [source,yaml]
 ----
 app:
-  name: bff
+  name: oidc
   image:
-    repository: "onecx/onecx-parameter-bff"
-  operator:
-    # Permission
-    permission:
-      enabled: true
+    repository: "onecx/onecx-test-oidc"
+    keycloak:
+      client:
+        enabled: true
+
+----
+
+bled: true
       spec:
         permissions:
           parameter:

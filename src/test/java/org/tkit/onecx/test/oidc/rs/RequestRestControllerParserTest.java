@@ -9,10 +9,10 @@ import org.junit.jupiter.api.Test;
 import io.quarkus.test.junit.QuarkusTest;
 
 @QuarkusTest
-class TestOidcRestControllerParserTest {
+class RequestRestControllerParserTest {
 
     @Inject
-    TestImplRestController controller;
+    BackendRestController controller;
 
     @Test
     void testParseClaims() {
