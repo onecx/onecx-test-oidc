@@ -2,6 +2,7 @@ app:
   name: oidc
   image:
     repository: "onecx/onecx-test-oidc"
+  operator:
     keycloak:
       client:
         enabled: true
