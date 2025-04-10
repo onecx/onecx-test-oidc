@@ -1,0 +1,26 @@
+package org.tkit.onecx.test.oidc.rs;
+
+import static io.restassured.RestAssured.given;
+import static jakarta.ws.rs.core.MediaType.APPLICATION_JSON;
+
+import jakarta.ws.rs.core.Response;
+
+import org.junit.jupiter.api.Test;
+
+import io.quarkus.test.common.http.TestHTTPEndpoint;
+import io.quarkus.test.junit.QuarkusTest;
+
+@QuarkusTest
+@TestHTTPEndpoint(TestImplRestController.class)
+public class TestImplRestControllerTest extends AbstractTest {
+
+    @Test
+    void testEndpointSecurity() {
+        given()
+                .when()
+                .contentType(APPLICATION_JSON)
+                .get()
+                .then()
+                .statusCode(Response.Status.UNAUTHORIZED.getStatusCode());
+    }
+}
