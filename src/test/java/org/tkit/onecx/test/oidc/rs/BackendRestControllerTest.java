@@ -12,7 +12,7 @@ import io.quarkus.test.junit.QuarkusTest;
 
 @QuarkusTest
 @TestHTTPEndpoint(BackendRestController.class)
-public class BackendRestControllerTest {
+class BackendRestControllerTest {
 
     @Test
     void testEndpointSecurity() {

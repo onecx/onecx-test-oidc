@@ -1,5 +1,6 @@
 package org.tkit.onecx.test.oidc.rs;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
 import jakarta.inject.Inject;
@@ -20,6 +21,12 @@ class RequestRestControllerParserTest {
                 .withCauseInstanceOf(NullPointerException.class)
                 .withMessage(
                         "java.lang.NullPointerException: Cannot invoke \"String.startsWith(String)\" because \"cs\" is null");
+    }
+
+    @Test
+    void testReflection() {
+        var tmp = new ReflectionConfig();
+        assertThat(tmp).isNotNull();
     }
 
 }

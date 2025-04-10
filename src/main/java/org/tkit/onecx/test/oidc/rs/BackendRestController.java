@@ -33,7 +33,14 @@ public class BackendRestController implements BackendApiService {
             var jws = (JsonWebSignature) JsonWebStructure.fromCompactSerialization(token);
             return JwtClaims.parse(jws.getUnverifiedPayload());
         } catch (Exception ex) {
-            throw new RuntimeException(ex);
+            throw new ClaimsException(ex);
+        }
+    }
+
+    public static class ClaimsException extends RuntimeException {
+
+        public ClaimsException(Throwable t) {
+            super(t);
         }
     }
 }
