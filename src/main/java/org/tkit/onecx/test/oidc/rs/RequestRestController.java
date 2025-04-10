@@ -8,21 +8,21 @@ import jakarta.ws.rs.core.Response;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 import org.tkit.quarkus.log.cdi.LogService;
 
-import gen.org.tkit.onecx.test.oidc.client.api.TestImplApi;
-import gen.org.tkit.onecx.test.oidc.rs.internal.TestOidcApiService;
+import gen.org.tkit.onecx.test.oidc.client.api.BackendApi;
+import gen.org.tkit.onecx.test.oidc.rs.internal.RequestApiService;
 
 @ApplicationScoped
 @Transactional(value = Transactional.TxType.NOT_SUPPORTED)
 @LogService
-public class TestOidcRestController implements TestOidcApiService {
+public class RequestRestController implements RequestApiService {
 
     @Inject
     @RestClient
-    TestImplApi testImplApi;
+    BackendApi backendApi;
 
     @Override
     public Response testOidcClient() {
-        try (var response = testImplApi.testOidcService()) {
+        try (var response = backendApi.testOidcService()) {
             var data = response.readEntity(Object.class);
             return Response.ok(data).build();
         }

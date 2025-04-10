@@ -6,13 +6,13 @@ info:
 servers:
   - url: http://onecx-test-oidc:8080/
 tags:
-  - name: test-oidc
-  - name: test-impl
+  - name: request
+  - name: backend
 paths:
     /impl/oidc/svc:
       get:
         tags:
-          - test-impl
+          - backend
         description: Test OIDC service
         operationId: testOidcService
         responses:
@@ -25,7 +25,7 @@ paths:
     /test/oidc/client:
       get:
         tags:
-          - test-oidc
+          - request
         description: Test OIDC client
         operationId: testOidcClient
         responses:

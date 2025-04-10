@@ -16,8 +16,8 @@ import io.quarkus.test.common.http.TestHTTPEndpoint;
 import io.quarkus.test.junit.QuarkusTest;
 
 @QuarkusTest
-@TestHTTPEndpoint(TestOidcRestController.class)
-class TestOidcRestControllerTest extends AbstractTest {
+@TestHTTPEndpoint(RequestRestController.class)
+class RequestRestControllerTest {
 
     @Test
     void testClient() {
