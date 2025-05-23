@@ -14,7 +14,8 @@ quarkus.http.auth.permission.test.paths=/test/*
 quarkus.http.auth.permission.test.policy=permit
 quarkus.http.auth.permission.default.paths=/*
 quarkus.http.auth.permission.default.policy=authenticated
-%prod.quarkus.rest-client.parameter_client.providers=io.quarkus.oidc.client.reactive.filter.OidcClientRequestReactiveFilter
+quarkus.rest-client.openapi_internal.url=http://localhost:${quarkus.http.port}
+%prod.quarkus.rest-client.openapi_internal.providers=io.quarkus.oidc.client.reactive.filter.OidcClientRequestReactiveFilter
 %prod.quarkus.oidc-client.client-id=${quarkus.application.name}
 quarkus.openapi-generator.codegen.spec.openapi_internal_yaml.config-key=openapi_internal
 quarkus.openapi-generator.codegen.spec.openapi_internal_yaml.base-package=gen.org.tkit.onecx.test.oidc.client
@@ -47,17 +48,14 @@ app:
   name: oidc
   image:
     repository: "onecx/onecx-test-oidc"
+  operator:
     keycloak:
       client:
         enabled: true
 
 ----
 
-bled: true
-      spec:
-        permissions:
-          parameter:
-            read: permission on all GET requests and POST search
+on on all GET requests and POST search
             write: permission on PUT, POST, PATCH requests, where objects are saved or updated
             delete: permission on all DELETE requests
           product:
