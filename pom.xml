@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.tkit.onecx</groupId>
         <artifactId>onecx-quarkus3-parent</artifactId>
-        <version>0.72.4</version>
+        <version>1.2.0</version>
     </parent>
 
     <artifactId>onecx-test-oidc</artifactId>
@@ -73,6 +73,10 @@
         <dependency>
             <groupId>io.quarkiverse.openapi.generator</groupId>
             <artifactId>quarkus-openapi-generator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkiverse.openapi.generator</groupId>
+            <artifactId>quarkus-openapi-generator-oidc</artifactId>
         </dependency>
     </dependencies>
 
