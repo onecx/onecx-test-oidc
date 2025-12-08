@@ -1,1 +1,0 @@
-* xref:onecx-test-oidc:index.adoc[Test OIDC]
