@@ -1,2 +1,2 @@
 # onecx-test-oidc
-OneCX test oidc
+OneCX Test OIDC
