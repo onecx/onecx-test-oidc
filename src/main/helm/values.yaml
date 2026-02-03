@@ -1,7 +1,5 @@
 app:
   name: oidc
-  template:
-    oidc_client_id: "ONECX_OIDC_CLIENT_CLIENT_ID"
   image:
     repository: "onecx/onecx-test-oidc"
   operator:
